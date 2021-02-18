@@ -1,0 +1,16 @@
+1. Структура файла .my.cnf
+[client]
+user=root
+password=my8sql
+2.
+mysql
+-> create database example;
+-> use example;
+-> create table users (id INT, name CHAR);
+-> exit
+3.
+mysqldump example > buf.sql
+mysql -e 'create database sample'
+mysql sample < buf.sql
+4.
+mysqldump mysql help_keyword --where='true limit 100' > help_keyword.sql
