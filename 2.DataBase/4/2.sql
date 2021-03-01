@@ -1,0 +1,10 @@
+use vk;
+select * from users;
+update users set update_at = now() where update_at<created_at ;
+select * from profiles;
+update profiles set update_at = now() where update_at<created_at ;
+select * from status_id;
+update profiles set status_id=1+floor(rand()*2);
+select * from messages;
+update messages set from_user_id=1+floor(rand()*100);
+update messages set to_user_id=1+floor(rand()*100);
