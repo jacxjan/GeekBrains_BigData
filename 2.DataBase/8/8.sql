@@ -40,7 +40,7 @@ INSERT INTO days VALUES
 
 SELECT
   DATE(DATE('2018-08-31') - INTERVAL d.day DAY) AS day,
-  NOT ISNULL(p.name) AS order_exist
+  NOT ISNULL(p.name) AS order
 FROM
   days AS d
 LEFT JOIN
@@ -111,7 +111,7 @@ DELIMITER //
 CREATE FUNCTION FIBONACCI(num INT)
 RETURNS INT DETERMINISTIC
 BEGIN
-  DECLARE fs DOUBLE;
+  DECLARE mn DOUBLE;
   SET mn = SQRT(5);
 
   RETURN (POW((1 + mn) / 2.0, num) + POW((1 - mn) / 2.0, num)) / mn;
